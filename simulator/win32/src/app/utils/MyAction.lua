@@ -135,23 +135,6 @@ function MyAction:blurShader(sprite)
     __programState:setUniformFloat("u_blurRadius", 30);
     sprite:setGLProgramState(__programState);
 end  
-
-function MyAction:backToNormalShader(sprite)
-    local program = cc.GLProgram:createWithByteArrays(vsh, fsh)
-    program:bindAttribLocation(cc.ATTRIBUTE_NAME_POSITION, cc.VERTEX_ATTRIB_POSITION)
-    program:bindAttribLocation(cc.ATTRIBUTE_NAME_COLOR, cc.VERTEX_ATTRIB_COLOR)
-    program:bindAttribLocation(cc.ATTRIBUTE_NAME_TEX_COORD, cc.VERTEX_ATTRIB_FLAG_TEX_COORDS)
-    program:link()
-    program:updateUniforms()
-
-    local glProgramState = cc.GLProgramState:getOrCreateWithGLProgram(program)
-
-    sprite:setGLProgram(program)
-    sprite:setGLProgramState(glProgramState)
-    glProgramState:setUniformVec2("u_resolution", cc.p(1280, 720))
-    glProgramState:setUniformFloat("u_blurRadius", 30)
-end
-
 function MyAction:deleteGaf(gafObj)
     gafObj:setVisible(false)
     gafObj:runAction(_Sequence(

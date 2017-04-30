@@ -18950,27 +18950,11 @@ int lua_cocos2dx_GLProgramState_setUniformVec2(lua_State* tolua_S)
         return 0;
     }
 #endif
-    argc = lua_gettop(tolua_S)-1;
-    do{
-        if (argc == 2) {
-            int arg0;
-            ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "cc.GLProgramState:setUniformVec2");
-
-            if (!ok) { break; }
-            cocos2d::Vec2 arg1;
-            ok &= luaval_to_vec2(tolua_S, 3, &arg1, "cc.GLProgramState:setUniformVec2");
-
-            if (!ok) { break; }
-            cobj->setUniformVec2(arg0, arg1);
-            lua_settop(tolua_S, 1);
-            return 1;
-        }
-    }while(0);
-    ok  = true;
-    do{
+    argc = lua_gettop(tolua_S) - 1;
+    do {
         if (argc == 2) {
             std::string arg0;
-            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.GLProgramState:setUniformVec2");
+            ok &= luaval_to_std_string(tolua_S, 2, &arg0, "cc.GLProgramState:setUniformVec2");
 
             if (!ok) { break; }
             cocos2d::Vec2 arg1;
@@ -18981,7 +18965,23 @@ int lua_cocos2dx_GLProgramState_setUniformVec2(lua_State* tolua_S)
             lua_settop(tolua_S, 1);
             return 1;
         }
-    }while(0);
+    } while (0);
+    ok = true;
+    do {
+        if (argc == 2) {
+            int arg0;
+            ok &= luaval_to_int32(tolua_S, 2, (int *)&arg0, "cc.GLProgramState:setUniformVec2");
+
+            if (!ok) { break; }
+            cocos2d::Vec2 arg1;
+            ok &= luaval_to_vec2(tolua_S, 3, &arg1, "cc.GLProgramState:setUniformVec2");
+
+            if (!ok) { break; }
+            cobj->setUniformVec2(arg0, arg1);
+            lua_settop(tolua_S, 1);
+            return 1;
+        }
+    } while (0);
     ok  = true;
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n",  "cc.GLProgramState:setUniformVec2",argc, 2);
     return 0;
@@ -19999,37 +19999,37 @@ int lua_cocos2dx_GLProgramState_setUniformFloat(lua_State* tolua_S)
     }
 #endif
     argc = lua_gettop(tolua_S)-1;
-    do{
-        if (argc == 2) {
-            int arg0;
-            ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "cc.GLProgramState:setUniformFloat");
-
-            if (!ok) { break; }
-            double arg1;
-            ok &= luaval_to_number(tolua_S, 3,&arg1, "cc.GLProgramState:setUniformFloat");
-
-            if (!ok) { break; }
-            cobj->setUniformFloat(arg0, arg1);
-            lua_settop(tolua_S, 1);
-            return 1;
-        }
-    }while(0);
-    ok  = true;
-    do{
+    do {
         if (argc == 2) {
             std::string arg0;
-            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.GLProgramState:setUniformFloat");
+            ok &= luaval_to_std_string(tolua_S, 2, &arg0, "cc.GLProgramState:setUniformFloat");
 
             if (!ok) { break; }
             double arg1;
-            ok &= luaval_to_number(tolua_S, 3,&arg1, "cc.GLProgramState:setUniformFloat");
+            ok &= luaval_to_number(tolua_S, 3, &arg1, "cc.GLProgramState:setUniformFloat");
 
             if (!ok) { break; }
-            cobj->setUniformFloat(arg0, arg1);
+            cobj->setUniformFloat(arg0, static_cast<float>(arg1));
             lua_settop(tolua_S, 1);
             return 1;
         }
-    }while(0);
+    } while (0);
+    ok  = true;
+    do {
+        if (argc == 2) {
+            int arg0;
+            ok &= luaval_to_int32(tolua_S, 2, (int *)&arg0, "cc.GLProgramState:setUniformFloat");
+
+            if (!ok) { break; }
+            double arg1;
+            ok &= luaval_to_number(tolua_S, 3, &arg1, "cc.GLProgramState:setUniformFloat");
+
+            if (!ok) { break; }
+            cobj->setUniformFloat(arg0, static_cast<float>(arg1));
+            lua_settop(tolua_S, 1);
+            return 1;
+        }
+    } while (0);
     ok  = true;
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n",  "cc.GLProgramState:setUniformFloat",argc, 2);
     return 0;

@@ -34,6 +34,16 @@
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
+          <AbstractNodeData Name="Image_1" ActionTag="-42699396" Tag="14" IconVisible="False" LeftMargin="156.0130" RightMargin="163.9871" TopMargin="24.5280" BottomMargin="55.4720" LeftEage="316" RightEage="316" TopEage="211" BottomEage="211" Scale9OriginX="316" Scale9OriginY="211" Scale9Width="328" Scale9Height="218" ctype="ImageViewObjectData">
+            <Size X="960.0000" Y="640.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="636.0130" Y="375.4720" />
+            <Scale ScaleX="1.3406" ScaleY="1.1437" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4969" Y="0.5215" />
+            <PreSize X="0.7500" Y="0.8889" />
+            <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+          </AbstractNodeData>
           <AbstractNodeData Name="actionNode" ActionTag="-937800577" Tag="176" IconVisible="True" LeftMargin="640.0000" RightMargin="640.0000" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
