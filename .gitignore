@@ -1,5 +1,6 @@
 #C,C++,Android,Lua,VisualStudio
 *.tlog
+Debug.win32/
 simulator/
 #C
 # Prerequisites
